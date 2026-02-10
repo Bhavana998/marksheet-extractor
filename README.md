@@ -1,5 +1,8 @@
 # AI Marksheet Extractor
 
+## frontend deploy link:https://marksheet-extractor-1-x81n.onrender.com
+## backend deploy link: https://marksheet-extractor-ludc.onrender.com/docs
+
 This project extracts structured data from marksheets using OCR and LLMs.
 
 ## Features
