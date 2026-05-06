@@ -50,6 +50,14 @@ Field Extraction (Name, Subjects, Marks, CGPA)
         ↓
 Structured Output (JSON / CSV)
 
+## ⚙️ How It Works
+
+1. Image Upload
+2. Image Preprocessing (OpenCV)
+3. OCR Extraction (Tesseract)
+4. Text Parsing
+5. Structured JSON Output
+
 ---
 
 ⚙️ Tech Stack
