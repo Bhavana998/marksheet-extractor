@@ -149,6 +149,80 @@ python app.py
 - 🧾 Automated verification systems
 
 ---
+## 📄 Output Format
+
+The API returns a structured JSON response:
+
+```json
+{
+  "status": "string",
+  "data": {
+    "student_name": "string",
+    "roll_number": "string",
+    "subjects": [
+      {
+        "subject": "string",
+        "marks_obtained": "integer",
+        "max_marks": "integer",
+        "status": "PASS | FAIL"
+      }
+    ],
+    "total_marks": "integer",
+    "maximum_marks": "integer",
+    "percentage": "float",
+    "result": "PASS | FAIL"
+  }
+}
+```
+---
+
+📊 Field Details
+
+- status
+  Indicates request status
+  
+  - ""success"" → extraction successful
+  - ""error"" → extraction failed
+
+- student_name
+  Full name of the student extracted from marksheet
+
+- roll_number
+  Unique identification number of the student
+
+- subjects
+  List of subjects with marks and status
+
+- subject
+  Name of the subject
+
+- marks_obtained
+  Marks scored in the subject
+
+- max_marks
+  Maximum marks for the subject (default: 100)
+
+- status (per subject)
+  
+  - ""PASS"" if marks ≥ 33
+  - ""FAIL"" if marks < 33
+
+- total_marks
+  Sum of marks obtained in all subjects
+
+- maximum_marks
+  Total possible marks (subjects × max_marks)
+
+- percentage
+  Calculated percentage of total marks
+
+- result
+  Final result
+  
+  - ""PASS"" → all subjects passed
+  - ""FAIL"" → any subject failed
+
+---
 
 👩‍💻 Author
 Bhavana 
