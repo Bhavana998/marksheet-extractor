@@ -36,19 +36,39 @@ This system automates the entire pipeline:
 
 ---
 
-🧠 System Architecture
+## 🧩 System Architecture
 
-Input Image/PDF
+```
+User Upload (Frontend)
         ↓
-Image Preprocessing (Noise Removal, Enhancement)
+Backend API (FastAPI)
         ↓
-OCR Engine (Tesseract / EasyOCR)
+Image Preprocessing (OpenCV)
+    • Resize
+    • Denoise
+    • Thresholding
         ↓
-Text Cleaning & Parsing
+OCR Engine (Tesseract / PaddleOCR)
         ↓
-Field Extraction (Name, Subjects, Marks, CGPA)
+Text Extraction
         ↓
-Structured Output (JSON / CSV)
+Table Detection & Parsing
+    • Identify subject rows
+    • Extract columns (subject, marks)
+        ↓
+Data Cleaning & Validation
+    • Remove noise
+    • Validate marks range
+        ↓
+Result Calculation
+    • Total Marks
+    • Percentage
+    • Pass/Fail
+        ↓
+Formatted JSON Response
+        ↓
+Frontend Display
+```
 
 ## ⚙️ How It Works
 
