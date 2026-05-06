@@ -136,8 +136,6 @@ Frontend Display
 
 - ⚡ Reduces manual data entry effort significantly
 
-(Add accuracy metrics if available)
-
 ---
 
 📌 Key Highlights
@@ -203,6 +201,7 @@ The API returns a structured JSON response:
 }
 ```
 ---
+## Accuracy: ~70–80% on clear images ##
 
 📊 Field Details
 
